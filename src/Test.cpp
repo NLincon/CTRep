@@ -4,6 +4,8 @@
 #include "cute_runner.h"
 #include "Hal.h"
 
+#define N_LOOPS			10
+
 using namespace std;
 
 void thisIsATest() {
@@ -31,7 +33,7 @@ void halLoopTest()
 {
 	int expectedResult = prepareLoop();
 
-	for(int i = 0; i < 10; i++)
+	for(int i = 0; i < N_LOOPS; i++)
 	{
 		loop();
 	}
