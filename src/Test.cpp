@@ -12,6 +12,9 @@ void thisIsATest() {
 
 int prepareSetup();
 int checkSetup();
+int prepareLoop();
+int checkLoop();
+
 
 void halSetupTest()
 {
@@ -26,8 +29,14 @@ void halSetupTest()
 
 void halLoopTest()
 {
-	int expectedResult = 0;
-	int actualResult = 0;
+	int expectedResult = prepareLoop();
+
+	for(int i = 0; i < 10; i++)
+	{
+		loop();
+	}
+
+	int actualResult = checkLoop();
 
 	ASSERT_EQUAL(expectedResult, actualResult);
 }
@@ -54,6 +63,15 @@ int prepareSetup()
 	return 0;
 }
 int checkSetup()
+{
+	return 0;
+}
+
+int prepareLoop()
+{
+	return 0;
+}
+int checkLoop()
 {
 	return 0;
 }
