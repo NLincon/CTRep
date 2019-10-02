@@ -4,14 +4,22 @@
 #include "cute_runner.h"
 #include "Hal.h"
 
+using namespace std;
+
 void thisIsATest() {
 	ASSERTM("start writing tests", false);	
 }
 
+int prepareSetup();
+int checkSetup();
+
 void halSetupTest()
 {
-	int expectedResult = 0;
-	int actualResult = 0;
+	int expectedResult = prepareSetup();
+
+	setup();
+
+	int actualResult = checkSetup();
 
 	ASSERT_EQUAL(expectedResult, actualResult);
 }
@@ -39,4 +47,13 @@ bool runAllTests(int argc, char const *argv[]) {
 
 int main(int argc, char const *argv[]) {
     return runAllTests(argc, argv) ? EXIT_SUCCESS : EXIT_FAILURE;
+}
+
+int prepareSetup()
+{
+	return 0;
+}
+int checkSetup()
+{
+	return 0;
 }
