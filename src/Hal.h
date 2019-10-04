@@ -19,6 +19,6 @@ public:
 	virtual ~Hal();
 };
 
-} /* namespace std */
+} /*  namespace std */
 
 #endif /* SRC_HAL_H_ */

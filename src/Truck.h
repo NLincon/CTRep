@@ -20,4 +20,4 @@ public:
 
 } /* namespace std */
 
-#endif /* SRC_TRUCK_H_ */
+#endif /*  SRC_TRUCK_H_ */

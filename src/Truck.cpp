@@ -15,12 +15,12 @@ void moveForward(double distance, int speed)
 }
 
 Truck::Truck() {
-	// TODO Auto-generated constructor stub
+	//  TODO Auto-generated constructor stub
 
 }
 
 Truck::~Truck() {
-	// TODO Auto-generated destructor stub
+	//  TODO Auto-generated destructor stub
 }
 
 } /* namespace std */

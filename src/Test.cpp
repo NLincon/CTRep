@@ -13,6 +13,8 @@ int prepareSetup();
 int checkSetup();
 int prepareLoop();
 int checkLoop();
+int checkPositionBefore();
+int checkPositionAfter();
 
 // HAL TESTS
 
@@ -43,7 +45,18 @@ void halLoopTest()
 
 // TRUCK TESTS
 
+void truckMoveTest()
+{
+  double distance = 10.0;
+  int speed = 100;
+  int expectedResult = checkPositionBefore();
 
+  moveForward(distance,speed);
+
+  int actualResult = checkPositionAfter();
+
+  ASSERT_EQUAL(expectedResult, actualResult);
+}
 
 // RUN ALL TESTS
 
@@ -52,6 +65,7 @@ bool runAllTests(int argc, char const *argv[]) {
 	//TODO add your test here
 	s.push_back(CUTE(halSetupTest));
 	s.push_back(CUTE(halLoopTest));
+	s.push_back(CUTE(truckMoveTest));
 	cute::xml_file_opener xmlfile(argc, argv);
 	cute::xml_listener<cute::ide_listener<>> lis(xmlfile.out);
 	auto runner = cute::makeRunner(lis, argc, argv);
@@ -81,4 +95,14 @@ int prepareLoop()
 int checkLoop()
 {
 	return 0;
+}
+
+int checkPositionBefore()
+{
+  return 0;
+}
+
+int checkPositionAfter()
+{
+  return 0;
 }

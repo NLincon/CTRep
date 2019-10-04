@@ -20,12 +20,12 @@ void loop()
 }
 
 Hal::Hal() {
-	// TODO Auto-generated constructor stub
+	//  TODO Auto-generated constructor stub
 
 }
 
 Hal::~Hal() {
-	// TODO Auto-generated destructor stub
+	//  TODO Auto-generated destructor stub
 }
 
 } /* namespace std */
